@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SRK EVENTS - Your Dream Event Creators</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #800000;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            color: #FFD700;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: wavyText 2s infinite;
+        }
+        @keyframes wavyText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .section {
+            background-color: #FFF;
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            color: #800000;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+        .founder {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .founder img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .founder-info h3 {
+            color: #800000;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .founder-info p {
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #800000;
+            font-size: 1.2em;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #800000;
+            color: #FFD700;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .btn:hover {
+            background-color: #600000;
+            transform: scale(1.05);
+        }
+        .icon {
+            margin-right: 10px;
+            color: #FFD700;
+        }
+        .service-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        .service-list li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .service-list li:before {
+            content: "\f0a4";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 10px;
+            color: #800000;
+        }
+        .popup {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFD700;
+            color: #800000;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            display: none;
+            z-index: 1000;
+            animation: popIn 0.5s ease-out;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .close-popup {
+            float: right;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .emotional-text {
+            font-style: italic;
+            font-size: 1.2em;
+            color: #555;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-heart icon"></i>About SRK EVENTS</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2><i class="fas fa-book-open icon"></i>Our Story</h2>
+            <p>SRK EVENTS is not just an event management company; we are dream weavers based in the beautiful city of Visakhapatnam, Andhra Pradesh. For over a decade, we've been crafting unforgettable experiences that touch hearts and create lasting memories.</p>
+            <p>Our journey began 12 years ago with a simple mission: to bring joy and excellence to every service we offer. From our humble beginnings with Mesava Digital Services, Pankaj Office Railway Reservation Counter, and AP RTO Services, we've grown, learned, and evolved.</p>
+            <p class="emotional-text">"Every challenge we faced, every obstacle we overcame, has led us to this moment - where we can now pour our hearts into making your special days truly magical."</p>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-users icon"></i>Our Founders</h2>
+            <div class="founder">
+                <img src="/placeholder.svg?height=150&width=150" alt="Adari Kalyan Kumar">
+                <div class="founder-info">
+                    <h3>Adari Kalyan Kumar</h3>
+                    <p>Founder, SRK EVENTS</p>
+                    <p>Mobile: <span class="highlight">7386450477</span></p>
+                    <p>"Your dreams are our mission. We're here to turn your vision into reality, no matter how big or small."</p>
+                </div>
+            </div>
+            <div class="founder">
+                <img src="PASSPORT SIZE PHOTO.jpg" alt="Adari Surendra">
+                <div class="founder-info">
+                    <h3>Adari Surendra</h3>
+                    <p>Co-Founder, SRK EVENTS</p>
+                    <p>Mobile: <span class="highlight">9494417644</span></p>
+                    <p>"Every event is a story waiting to be told. Let us help you tell yours in the most beautiful way possible."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-handshake icon"></i>Our Commitment</h2>
+            <p>At SRK EVENTS, our commitment goes beyond just planning events. We pour our hearts and souls into every detail, ensuring that each moment is as special as you've dreamed it to be.</p>
+            <p>We've faced challenges, overcome obstacles, and even worked without profit - all because we believe in the power of creating joy and unforgettable memories for our clients.</p>
+            <p class="emotional-text">"Your happiness is our success. Your smile is our reward. We're not just event planners; we're your partners in creating moments that will be cherished for a lifetime."</p>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-magic icon"></i>Our Services</h2>
+            <p>We bring magic to every occasion, big or small. Our services include:</p>
+            <ul class="service-list">
+                <li>Fairytale Weddings and Romantic Engagements</li>
+                <li>Spectacular Birthday Bashes</li>
+                <li>Impressive Corporate Events</li>
+                <li>Soulful Cultural and Religious Ceremonies</li>
+                <li>Joyous Baby Showers and Child Birth Celebrations</li>
+                <li>And any other event you can dream of!</li>
+            </ul>
+            <p>Each event is a canvas, and your vision is our inspiration. Together, we'll create a masterpiece that reflects your unique style and personality.</p>
+        </section>
+
+        <a href="index.html" class="btn"><i class="fas fa-home icon"></i>Back to Home</a>
+    </div>
+
+    <div id="discount-popup" class="popup">
+        <span class="close-popup" onclick="closePopup('discount-popup')">&times;</span>
+        <p><strong>Special Offer!</strong> Book your event today and get 20% off! Call now!</p>
+    </div>
+
+    <div id="phone-popup" class="popup">
+        <span class="close-popup" onclick="closePopup('phone-popup')">&times;</span>
+        <p>Call us now: <strong>7386450477</strong> or <strong>9494417644</strong></p>
+    </div>
+    <div id="discount-popup" class="popup">
+        <span class="close-popup" onclick="closePopup('discount-popup')">&times;</span>
+        <p><strong>Wedding offers!</strong> Book your event and get complimentary Decorations</p>
+    </div>
+
+    <script>
+        function showPopup(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closePopup(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        // Show discount popup after 5 seconds
+        setTimeout(() => showPopup('discount-popup'), 4000);
+
+        // Show phone popup every 30 seconds
+        setInterval(() => {
+            showPopup('phone-popup');
+            setTimeout(() => closePopup('phone-popup'), 5000);
+        }, 30000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRK EVENTS - Turning Moments into Memories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes backgroundScroll {
+            0% { background-position: 0 0; }
+            100% { background-position: -100% 0; }
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #800000;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://source.unsplash.com/random/1600x900/?indian,pattern') repeat-x;
+            opacity: 0.1;
+            animation: backgroundScroll 60s linear infinite;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            max-width: 100px;
+            margin-right: 20px;
+            animation: pulse 2s infinite;
+        }
+        h1 {
+            color: #FFD700;
+            font-size: 4em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background-color: #FFD700;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #800000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #FF4500;
+        }
+        .hero {
+            background-image: url('https://wallpapercave.com/wp/wp7488367.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFF;
+            text-align: center;
+            position: relative;
+        }
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #FFD700;
+            color: #800000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #FFA500;
+            transform: scale(1.05);
+        }
+        .section {
+            background-color: #FFF;
+            margin: 40px 0;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        .section h2 {
+            color: #800000;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        .event-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .event-type {
+            text-align: center;
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+        .event-type:hover {
+            transform: translateY(-10px);
+        }
+        .event-type img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .event-type h3 {
+            color: #800000;
+            margin-bottom: 10px;
+        }
+        .reviews-container {
+            overflow: hidden;
+            height: 300px;
+        }
+        .reviews {
+            animation: scrollReviews 60s linear infinite;
+        }
+        @keyframes scrollReviews {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100%); }
+        }
+        .review {
+            width: 300px;
+            background-color: #f9f9f9;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            animation: fadeInUp 1s ease-out;
+        }
+        .review:hover {
+            transform: scale(1.05);
+        }
+        .stars {
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .calendar-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #FFD700;
+            color: #800000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .calendar-button:hover {
+            background-color: #FFA500;
+            transform: scale(1.05);
+        }
+        #calendar-container {
+            display: none;
+            margin-top: 20px;
+        }
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #800000;
+            color: #FFD700;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container button:hover {
+            background-color: #600000;
+        }
+        footer {
+            background-color: #800000;
+            color: #FFF;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .social-icons a {
+            color: #FFD700;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #FFA500;
+        }
+        .contact-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #FFF;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+        .instagram-button {
+            background: #f09433;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+        .contact-button:hover {
+            transform: scale(1.1);
+        }
+        #visitor-count {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #fireworks-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .highlight {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #FFD700;
+            animation: pulse 2s infinite;
+        }
+        .location {
+            background-color: rgba(255, 215, 0, 0.1);
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .location h3 {
+            color: #800000;
+            margin-bottom: 10px;
+        }
+        .marquee {
+            background-color: #FFD700;
+            color: #800000;
+            padding: 10px 0;
+            font-weight: bold;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        #celebration-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            display: none;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 65px;
+            background-color: #ff0000;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            animation: float 4s ease-in-out infinite;
+            bottom: -100px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .burst {
+            animation: burst 0.5s ease-out;
+        }
+        @keyframes burst {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+        .offer {
+            position: absolute;
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            pointer-events: none;
+        }
+        .map-container {
+            height: 300px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+        }
+        .popup-content {
+            text-align: center;
+        }
+        .close-popup {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: explode 1s ease-out forwards;
+        }
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(20); opacity: 0; }
+        }
+        .watermark {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.3);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container logo-container">
+            <img src="logosrk.png" alt="SRK EVENTS Logo" class="logo">
+            <h1>SRK EVENTS</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="marquee">
+        <div class="marquee-content">
+            Exciting offers! Up to 50% off on selected events! Book now for amazing deals on your dream event!
+        </div>
+    </div>
+
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h2>Turning Moments into Memories</h2>
+            <p>From Child Birth Ceremonies to Grand Weddings, We Make Every Moment Special</p>
+            <p>Call us now: <span class="highlight">7386450477</span></p>
+            <a href="#contact" class="btn">Start Planning Your Dream Event</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="event-types">
+                <div class="event-type">
+                    <img src="https://content.jdmagicbox.com/v2/comp/hyderabad/e9/040pxx40.xx40.210924124323.w5e9/catalogue/balloons-unlimited-yapral-hyderabad-flower-decorators-pe8ykggfik.jpg?height=200&width=250" alt="Birthday Parties">
+                    <h3>Birthday Parties</h3>
+                    <p>Celebrate another year with unforgettable parties.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://vizagpellipoolajada.com/wp-content/uploads/2020/02/Wedding-Stage-Decor-2.jpeg" alt="Weddings">
+                    <h3>Weddings</h3>
+                    <p>Create the wedding of your dreams with our expert planning.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://www.oyorooms.com/blog/wp-content/uploads/2018/03/fe-30.jpg" alt="Corporate Events">
+                    <h3>Corporate Events</h3>
+                    <p>Impress your clients and employees with professional events.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://www.eventsadda.com/tagimageHandler.ashx?id=287" alt="Birthday Parties">
+                    <h3>Child Birth Ceremony</h3>
+                    <p>Welcome your little one with a grand celebration.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://cheetah.cherishx.com/uploads/1697462539_large.jpg" alt="Religious & Cultural Ceremonies">
+                    <h3>Religious & Cultural Ceremonies</h3>
+                    <p>Honor your traditions with beautifully organized ceremonies.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://media.licdn.com/dms/image/C4E12AQHRMlmLBSX7IA/article-cover_image-shrink_720_1280/0/1618378319152?e=2147483647&v=beta&t=aEIU-I3deMWaPK-28fPNCUN8bQS0P4WWhSkf_8Bjgy4" alt="Theme Parties">
+                    <h3>Theme Parties</h3>
+                    <p>From Halloween to New Year's Eve, we bring your theme to life.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://s3.eu-west-2.amazonaws.com/files.sewport.com/blog/top-fashion-trade-shows-to-attend-%26-how-to-prepare-for-an-exhibit/usa-trade-show.jpeg" alt="Fashion Shows & Exhibitions">
+                    <h3>Fashion Shows & Exhibitions</h3>
+                    <p>Showcase your products with style and elegance.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://ourladynursingcollegetnj.org/templates/images/gallery/grad-2023/BPS2.jpg" alt="Graduation Parties">
+                    <h3>Graduation Parties</h3>
+                    <p>Celebrate academic achievements with memorable parties.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://www.salmonpinkevent.com/wp-content/uploads/2021/07/kitty-party-dinner.jpg" alt="Kitty Parties">
+                    <h3>Kitty Parties</h3>
+                    <p>Enjoy fun-filled gatherings with friends and loved ones.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://d1x5473tif8knj.cloudfront.net/media/events/622/conversions/Untitled-design-(2)-thumb.jpg" alt="Haldi Ceremony">
+                    <h3>Haldi Ceremony</h3>
+                    <p>Add a touch of tradition to your pre-wedding celebrations.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://s3-us-west-2.amazonaws.com/shaadiwishnewbucket/bb72c65c-4542-45a9-aea9-17807d61ed1e.jpg" alt="Engagements">
+                    <h3>Engagements</h3>
+                    <p>Start your journey to forever with a magical engagement party.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="specialties" class="section">
+            <h2>Our Specialties</h2>
+            <div class="event-types">
+                <div class="event-type">
+                    <img src="https://media.istockphoto.com/id/512034218/photo/man-holding-his-camera-on-walkway-during-his-travel.jpg?s=612x612&w=0&k=20&c=CUndjNY_5sokWNdmRhu8O6DHDiA7F0fqlU_vrOBijEg=" alt="Photography">
+                    <h3>Photography</h3>
+                    <p>Capture your precious moments with our professional photographers.</p>
+                </div>
+                <div class="event-type">
+                    <img src="https://eraayaevents.com/wp-content/uploads/2024/07/ehfbwe.png" alt="Catering">
+                    <h3>Catering</h3>
+                    <p>Delight your guests with our mother's food-inspired catering service.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About SRK EVENTS</h2>
+            <p>SRK EVENTS, situated in the beautiful city of Visakhapatnam, is Andhra Pradesh's premier event management company. With over 60 five-star ratings, we specialize in creating unforgettable experiences for all of life's important moments. Our expert team of event planners handles everything from initial consultation to final execution, ensuring every detail is perfect.</p>
+            <div class="location">
+                <h3>Our Locations</h3>
+                <p>We proudly serve the city of destiny, Visakhapatnam, and surrounding areas in Andhra Pradesh.</p>
+                <p>Branch 1: Narava</p>
+                <p>Branch 2: Chandranagar</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.31698198277!2d83.09638769921875!3d17.73067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a39431389e6973f%3A0x92d9c20395498468!2sVisakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1652332728095!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/fPmCCMx2UGiTkcjU6" target="_blank" class="btn">Check Our 60+ Five Star Ratings</a>
+        </section>
+
+        <section id="calendar" class="section">
+            <h2>Auspicious Dates (Telugu Calendar)</h2>
+            <button class="calendar-button" onclick="toggleCalendar()">Show Calendar</button>
+            <div id="calendar-container">
+                <iframe src="https://telugu.panchangam.org/" width="100%" height="600" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <section id="reviews" class="section">
+            <h2>Customer Reviews</h2>
+            <div class="reviews-container">
+                <div class="reviews">
+                    <div class="review">
+                        <div class="stars">★★★★★</div>
+                        <p>"SRK EVENTS made our wedding day absolutely perfect! Their attention to detail was incredible."</p>
+                        <p>- Priya Reddy</p>
+                    </div>
+                    <div class="review">
+                        <div class="stars">★★★★★</div>
+                        <p>"The team at SRK EVENTS went above and beyond for our corporate event. Highly recommended!"</p>
+                        <p>- Ravi Kumar</p>
+                    </div>
+                    <div class="review">
+                        <div class="stars">★★★★★</div>
+                        <p>"We were so impressed with how SRK EVENTS handled our son's first birthday party. It was magical!"</p>
+                        <p>- Lakshmi Prasad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="form-container">
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="button" onclick="sendWhatsApp()">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SRK EVENTS. All rights reserved.</p>
+            <p>Contact us: <span class="highlight">7386450477</span></p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/srkevent" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/srkevent" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com/srkevent" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="contact-buttons">
+        <a href="https://wa.me/917386450477" class="contact-button whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/srkevent" class="contact-button instagram-button" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+
+    <div id="visitor-count">Visitors: <span id="count">0</span></div>
+
+    <div id="celebration-container"></div>
+
+    <div id="discount-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <h2>Special Offer!</h2>
+            <p>Book now and get 30% off on your dream event!</p>
+            <a href="#contact" class="btn" onclick="closePopup()">Book Now</a>
+        </div>
+    </div>
+
+    <div class="watermark">Website by Adari Surendra Samrahan's</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fireworks/1.0.0/fireworks.min.js"></script>
+    <script>
+        function sendWhatsApp() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var message = document.getElementById("message").value;
+            var whatsappMessage = `Message from SRK EVENTS website:%0A%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+            window.open(`https://wa.me/919494417644?text=${whatsappMessage}`, '_blank');
+        }
+
+        var count = localStorage.getItem('visitorCount') || 0;
+        count++;
+        document.getElementById('count').textContent = count;
+        localStorage.setItem('visitorCount', count);
+
+        var container = document.querySelector('body');
+        var fireworks = new Fireworks(container);
+
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', () => {
+                fireworks.start();
+                setTimeout(() => fireworks.stop(), 3000);
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function animateOnScroll() {
+            var elements = document.querySelectorAll('.section, .event-type, .review');
+            elements.forEach(function(element) {
+                if (isElementInViewport(element)) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        function toggleCalendar() {
+            var calendar = document.getElementById('calendar-container');
+            if (calendar.style.display === 'none' || calendar.style.display === '') {
+                calendar.style.display = 'block';
+            } else {
+                calendar.style.display = 'none';
+            }
+        }
+
+        function createBalloon() {
+            var balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = Math.random() * window.innerWidth + 'px';
+            balloon.style.backgroundColor = getRandomColor();
+            document.body.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.style.opacity = '1';
+                balloon.style.bottom = window.innerHeight + 'px';
+            }, 100);
+
+            setTimeout(() => {
+                if (Math.random() < 0.3) {
+                    burstBalloon(balloon);
+                } else {
+                    balloon.remove();
+                }
+            }, 4000 + Math.random() * 2000);
+        }
+
+        function burstBalloon(balloon) {
+            balloon.classList.add('burst');
+            createOffer(balloon);
+            setTimeout(() => balloon.remove(), 500);
+        }
+
+        function createOffer(balloon) {
+            var offer = document.createElement('div');
+            offer.className = 'offer';
+            offer.textContent = getRandomOffer();
+            offer.style.left = balloon.style.left;
+            offer.style.top = balloon.offsetTop + 'px';
+            document.body.appendChild(offer);
+            setTimeout(() => offer.remove(), 2000);
+        }
+
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random()*16777215).toString(16);
+        }
+
+        function getRandomOffer() {
+            var offers = ['30% OFF!', '50% OFF!', 'Book Now!', 'Special Deal!'];
+            return offers[Math.floor(Math.random() * offers.length)];
+        }
+
+        setInterval(createBalloon, 1000);
+
+        function createFirework(x, y) {
+            for (var i = 0; i < 30; i++) {
+                var firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = x + 'px';
+                firework.style.top = y + 'px';
+                firework.style.backgroundColor = getRandomColor();
+                firework.style.transform = `rotate(${Math.random() * 360}deg)`;
+                document.body.appendChild(firework);
+                setTimeout(() => firework.remove(), 1000);
+            }
+        }
+
+        document.body.addEventListener('click', function(e) {
+            createFirework(e.clientX, e.clientY);
+        });
+
+        function showPopup() {
+            document.getElementById('discount-popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('discount-popup').style.display = 'none';
+        }
+
+        setTimeout(showPopup, 5000);
+
+        function startCelebration() {
+            var container = document.getElementById('celebration-container');
+            container.style.display = 'block';
+            
+            for (var i = 0; i < 20; i++) {
+                var balloon = document.createElement('div');
+                balloon.className = 'balloon';
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(balloon);
+            }
+
+            alert("Welcome to SRK EVENTS - Your Family for Unforgettable Celebrations!");
+
+            setTimeout(function() {
+                container.style.display = 'none';
+                container.innerHTML = '';
+            }, 5000);
+        }
+
+        window.addEventListener('load', startCelebration);
+    </script>
+</body>
+</html>
