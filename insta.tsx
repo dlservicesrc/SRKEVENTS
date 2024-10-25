@@ -6,7 +6,7 @@ export default function SRKEventInstagramEmbed() {
     <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg">
       <div className="flex items-center p-4">
         <Image
-          src="/placeholder.svg?height=40&width=40"
+          src="event (1).jpeg"
           alt="SRK Event Profile"
           width={40}
           height={40}
