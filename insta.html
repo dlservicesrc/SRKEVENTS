@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRK Event Festive Instagram Embed</title>
+    <style>
+        @keyframes colorSplash {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes fireworks {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd2);
+            background-size: 400% 400%;
+            animation: colorSplash 15s ease infinite;
+        }
+        .instagram-embed {
+            max-width: 400px;
+            background-color: white;
+            border-radius: 3px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .festive-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .diya {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ffdb58, #ff6b6b);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ffdb58;
+            animation: flicker 1s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        .firework {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            animation: fireworks 2s ease-out infinite;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            border-bottom: 1px solid #efefef;
+        }
+        .profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 12px;
+            border: 2px solid #e1306c;
+        }
+        .username {
+            font-weight: 600;
+            color: #262626;
+        }
+        .view-profile {
+            margin-left: auto;
+            color: #0095f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .post-image {
+            width: 100%;
+            height: auto;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 16px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+        }
+        .action-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px 0;
+        }
+        .content {
+            padding: 0 16px 16px;
+        }
+        .likes {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #262626;
+        }
+        .caption {
+            margin-bottom: 4px;
+            color: #262626;
+        }
+        .hashtag {
+            color: #00376b;
+        }
+        .view-comments {
+            color: #8e8e8e;
+            margin-top: 4px;
+        }
+        .add-comment {
+            border-top: 1px solid #efefef;
+            padding: 16px;
+        }
+        .comment-input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+        .contact-info {
+            border-top: 1px solid #efefef;
+            padding: 16px;
+            text-align: center;
+            color: #8e8e8e;
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="instagram-embed">
+        <div class="festive-overlay">
+            <div class="diya" style="top: 10%; left: 5%;"></div>
+            <div class="diya" style="top: 80%; right: 10%;"></div>
+            <div class="firework" style="top: 30%; left: 20%; background-color: #ff6b6b;"></div>
+            <div class="firework" style="top: 60%; right: 15%; background-color: #4ecdc4;"></div>
+            <div class="firework" style="top: 40%; left: 80%; background-color: #ffbe76;"></div>
+        </div>
+        <div class="header">
+            <img src="logosrk.png" alt="SRK Event Profile" class="profile-pic">
+            <div>
+                <div class="username">srkevent</div>
+                <div style="font-size: 12px; color: #8e8e8e;">Follow</div>
+            </div>
+            <a href="https://www.instagram.com/srkevent/" class="view-profile" target="_blank" rel="noopener noreferrer">View profile</a>
+        </div>
+        <img  src="/placeholder.svg?height=400&width=400" alt="SRK Event Instagram post" class="post-image">
+        <div class="actions">
+            <div class="action-buttons">
+                <button class="action-button" aria-label="Like">
+                    <svg aria-label="Like" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                </button>
+                <button class="action-button" aria-label="Comment">
+                    <svg aria-label="Comment" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+                <button class="action-button" aria-label="Share">
+                    <svg aria-label="Share Post" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </button>
+            </div>
+            <button class="action-button" aria-label="Save">
+                <svg aria-label="Save" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+            </button>
+        </div>
+        <div class="content">
+            <div class="likes">Liked by others</div>
+            <div class="caption">
+                <span class="username">srkevent</span> Celebrate with us! Experience the magic of our festive events! 
+                <span class="hashtag">#SRKEvent</span>
+            </div>
+            <div class="view-comments">View all comments</div>
+        </div>
+        <div class="add-comment">
+            <input type="text" placeholder="Add a comment..." class="comment-input">
+        </div>
+        <div class="contact-info">
+            Contact us: 7386450477
+        </div>
+    </div>
+</body>
+</html>
